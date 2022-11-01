@@ -7,7 +7,7 @@ import { EmployeeModule } from './employee/employee.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { UsersService } from './users/users.service';
 import { UsersModule } from './users/users.module';
-import { userentity } from './users/users.entity';
+// import { userentity } from './users/users.entity';
 
 @Module({
   imports: [
@@ -21,7 +21,7 @@ import { userentity } from './users/users.entity';
         username: configService.get('DB_USERNAME'),
         password: configService.get('DB_PASSWORD'),
         database: configService.get('DB_NAME'),
-        entities: [userentity],
+        entities: [],
         synchronize: true,
       }),
       inject: [ConfigService],
